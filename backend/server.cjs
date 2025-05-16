@@ -8,6 +8,8 @@
   // Middleware
   app.use(cors());
   app.use(express.json());
+  app.use(express.static("public")); // or your frontend build folder
+
 
   // MongoDB Connection
   mongoose.connect("mongodb://127.0.0.1:27017/feedback_db", {
